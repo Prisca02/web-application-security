@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" style="align-items: center;margin-top: 50px">
+            <h2 style="color:darkblue;text-align: center" >{{'CONTACT.TITLE_CONTACT' | translate}}</h2>
+            <div class="contact">
+                <h3>{{'CONTACT.OUR_LOCATION' | translate}}</h3> <br>
+                <h5><strong>1.</strong> {{'CONTACT.ADDRESS_CONTACT' | translate}}</h5><br>
+                <h5><strong>2.</strong> {{'CONTACT.ADDRESS_CONTACT1' | translate}}</h5><br>
+                <h5><strong>3.</strong> {{'CONTACT.ADDRESS_CONTACT2' | translate}}</h5><br>
+            </div>
+            <div class="contact">
+                <h3>
+                    <a  href="tel:+861324802224">{{'HOME.TEL' | translate}}</a><br>
+                    <a href="mailto:genius.baller@hotmail.com " > {{'HOME.EMAIL' | translate}}</a>
+                </h3> <br>
+            </div >
+            <div class="contact">
+                <h5><strong>4.</strong> {{'CONTACT.ADDRESS_CONTACT3' | translate}}</h5><br>
+                <h3>
+                    <a href="tel:+33766849759">{{'HOME.TEL_FRANCE' | translate}}</a><br>
+                    <a href="mailto:genius.baller@hotmail.com " > {{'HOME.EMAIL' | translate}}</a>
+                </h3> <br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4 style="color: darkblue;text-align: center">{{'CONTACT.WECHAT_TITLE' | translate}} </h4>
+             <img class="qrcode" src="http://localhost/prisc_app/admin/upload/geniusballerqr.jpg" alt="wechatqr" >
+        </div>
+    </div>
+</div>
+<footer style="background-color:skyblue;margin-top: 100px">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="title">{{'HOME.SITE_MAP' | translate}}</div>
+        <div class="text_link">
+          <ul>
+            <li><a routerLink="/home">{{'TOOLBAR.HOME' | translate}}</a></li>
+            <li><a routerLink="/about">{{'TOOLBAR.ABOUT' | translate}}</a></li>
+            <li><a routerLink="/weeklyTraining program">{{'TOOLBAR.WEEKLY_TRAINING' | translate}}</a></li>
+            <li><a routerLink="/privateClass program">{{'TOOLBAR.PRIVATE_CLASS' | translate}}</a></li>
+            <li><a routerLink="/beginnerBasketball program">{{'TOOLBAR.BEGINNER_BASKET' | translate}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+         <div  class="title">{{'TOOLBAR.CONTACT' | translate}}</div>
+         <p>
+           <a href="tel:+8613248022245">{{'HOME.TEL' | translate}}</a> <br>
+           <a href="mailto:genius.baller@hotmail.com "> {{'HOME.EMAIL' | translate}}</a><br>
+           {{'HOME.SCAN_QR' | translate}}<br>
+           <a routerLink="/contact">
+            <img class="qrcode" src="http://localhost/prisc_app/admin/upload/geniusballerqr.jpg" alt="wechatqr" style="width: 50px; height: 50px" ><br>
+            </a>
+          </p>
+      </div>
+      <div class="col-4">
+        <div class="title">{{'HOME.FOLLOW' | translate}}</div>
+        <a class="icon_fb" href="https://www.facebook.com/Genius-Baller-104081634568635/" target="_blank"></a>
+        <a class = "icon_instagram" href="https://www.instagram.com" target="_blank"></a>
+        <a class = "icon_wechat" href="" routerLink="/contact" target="_blank"></a>
+
+      </div>
+    </div>
+
+  </div>
+</footer>

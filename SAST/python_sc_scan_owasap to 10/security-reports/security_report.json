@@ -1,0 +1,34 @@
+{
+  "/home/runner/work/Genius-Baller/Genius-Baller/server/main.py": [
+    {
+      "id": "xss-risk",
+      "name": "Potential Cross-Site Scripting (XSS)",
+      "description": "Detected pattern matching Potential Cross-Site Scripting (XSS).",
+      "severity": "Medium",
+      "score": 6,
+      "recommendation": "Sanitize and escape user-supplied content before rendering it in HTML responses.",
+      "line": 3,
+      "match_text": "render_template"
+    },
+    {
+      "id": "xss-risk",
+      "name": "Potential Cross-Site Scripting (XSS)",
+      "description": "Detected pattern matching Potential Cross-Site Scripting (XSS).",
+      "severity": "Medium",
+      "score": 6,
+      "recommendation": "Sanitize and escape user-supplied content before rendering it in HTML responses.",
+      "line": 3,
+      "match_text": "render_template"
+    },
+    {
+      "id": "xss-risk",
+      "name": "Potential Cross-Site Scripting (XSS)",
+      "description": "Detected pattern matching Potential Cross-Site Scripting (XSS).",
+      "severity": "Medium",
+      "score": 6,
+      "recommendation": "Sanitize and escape user-supplied content before rendering it in HTML responses.",
+      "line": 19,
+      "match_text": "render_template"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row"  style="background-color: #1976d2">
+     <div class="col-md-4 " style="min-height: 50px" >
+       <img class="logo_area" src= "http://localhost/prisc_app/admin/upload/baller.jpeg" >
+     </div>
+  <div class="col-md-8" style="text-align:center ;color: white">
+    <button mat-button routerLink="/home" > {{'TOOLBAR.HOME'  | translate}} </button>
+    <button mat-button routerLink="/about">  {{'TOOLBAR.ABOUT' | translate }}</button>
+    <button mat-button [matMenuTriggerFor]="program" > {{'TOOLBAR.PROGRAM' | translate}}</button>
+    <mat-menu #program ="matMenu">
+      <button mat-menu-item routerLink="/weeklyTraining program" > {{'TOOLBAR.WEEKLY_TRAINING' | translate}} </button>
+      <button mat-menu-item routerLink="/privateClass program" >{{'TOOLBAR.PRIVATE_CLASS' | translate}}</button>
+      <button mat-menu-item routerLink="/beginnerBasketball program" >{{'TOOLBAR.BEGINNER_BASKET' | translate}}</button>
+    </mat-menu>
+    <button mat-button routerLink="/winterCamp" >{{'TOOLBAR.WINTER_CAMP' | translate}}</button>
+    <button mat-button routerLink="/summerCamp"  >{{'TOOLBAR.SUMMER_CAMP' | translate}}</button>
+    <button mat-button routerLink="/classesVideos"  >{{'TOOLBAR.CLASS_VIDEOS' | translate}}</button>
+    <div style="text-align: right">
+      <button mat-button routerLink="/contact" >{{'TOOLBAR.CONTACT' | translate}}</button>
+      <label>{{'TOOLBAR.TRANSLATE' | translate}}
+        <select #langselect (change)="translate.use(langselect.value)" >
+          <option *ngFor=" let lang of translate.getLangs()" [value]="lang" >{{lang}}</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+

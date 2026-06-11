@@ -1,0 +1,58 @@
+name: Security Tests
+
+on:
+  push:
+    branches:
+      - 'master'
+  
+  
+  workflow_dispatch:
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install bandit semgrep pip-audit
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run security tests
+        run: |
+          python scan_SC_vulnerabilities.py \
+          --path server/ \
+          --output security_report.txt
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            security_report.txt
+            security_report.json
+          if-no-files-found: warn
+      - name: Run vulnerability scanning
+        run: |
+          python scan_vulnerabilities.py
+      - name: Upload HTML security report artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: security-report
+          path: security_report.html
+      - name: Upload SARIF to GitHub Security
+        uses: actions/upload-artifact@v6
+        with:
+          name: scan_results
+          path: scan_results.sarif
+            
+        
+

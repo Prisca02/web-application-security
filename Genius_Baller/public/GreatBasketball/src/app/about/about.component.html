@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row" style="margin-top: 50px">
+     <div class="col-12" style="min-height: 200px;">
+       <div class="background_area">
+       </div>
+     </div>
+  </div>
+   <div class="row" style="margin-top: 50px">
+     <div class="col-6">
+       <img class="coach" src="http://localhost/prisc_app/admin/upload/coach_gb3.jpg" alt="Coach GB"  >
+     </div>
+     <div class="col-6" style="min-height: 200px">
+       <h1 >{{'ABOUT.COACH' | translate}}</h1>
+       <p >{{'ABOUT.COACH_INTRODUCTION' | translate}}</p>
+     </div>
+   </div>
+</div>
+<footer style="background-color:skyblue;margin-top: 100px">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="title">{{'HOME.SITE_MAP' | translate}}</div>
+        <div class="text_link">
+          <ul>
+            <li><a routerLink="/home">{{'TOOLBAR.HOME' | translate}}</a></li>
+            <li><a routerLink="/about">{{'TOOLBAR.ABOUT' | translate}}</a></li>
+            <li><a routerLink="/weeklyTraining program">{{'TOOLBAR.WEEKLY_TRAINING' | translate}}</a></li>
+            <li><a routerLink="/privateClass program">{{'TOOLBAR.PRIVATE_CLASS' | translate}}</a></li>
+            <li><a routerLink="/beginnerBasketball program"> {{'TOOLBAR.BEGINNER_BASKET' | translate}}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+         <div  class="title">{{'TOOLBAR.CONTACT' | translate}}</div>
+         <p>
+           <a href="tel:+8613248022245">{{'HOME.TEL' | translate}}</a><br>
+           <a href="mailto:geniusballer@gmail.com ">{{'HOME.EMAIL' | translate}}</a><BR>
+           {{'HOME.SCAN_QR' | translate}}<br>
+           <a routerLink="/contact">
+            <img class="qrcode" src="http://localhost/prisc_app/admin/upload/geniusballerqr.jpg" alt="wechatqr" style="width: 50px; height: 50px" ><br>
+            </a>
+          </p>
+      </div>
+      <div class="col-4">
+        <div  class="title">{{'HOME.FOLLOW' | translate}}</div>
+        <a class="icon_fb" href="https://www.facebook.com/Genius-Baller-104081634568635/" target="_blank"></a>
+        <a class = "icon_instagram" href="https://www.instagram.com" target="_blank"></a>
+        <a class = "icon_wechat" href="" routerLink="/contact" target="_blank"></a>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+

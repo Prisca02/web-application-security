@@ -1,0 +1,11 @@
+.toolbar{
+  min-height: 60px;
+  margin: 8px;
+  display: flex;
+  color: white;
+  font-weight: 600;
+}
+.logo_area{
+  border-radius: 100px;
+  margin-left: 10px;
+}

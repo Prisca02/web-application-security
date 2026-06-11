@@ -1,0 +1,54 @@
+.table{
+  background: #f2F2F2;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  border-collapse:collapse;
+  border-color: grey;
+}
+.Training{
+  text-align: center;
+  box-sizing: content-box;
+  width: 50%;
+  min-height: 150px;
+  border: 10px solid cadetblue;
+  margin-top: 50Px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+
+}
+.title{
+  font-size: 16pt;
+  line-height: 140%;
+  border-bottom: 1px solid #FFF;
+  padding: 0 0 6px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.icon_fb{
+  background: url("../../assets/image/icon_fb.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.icon_instagram {
+  background: url("../../assets/image/icon_instagram.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 45px;
+  height: 45px;
+  text-indent: -999px;
+  display: block;
+}
+.icon_wechat{
+  background: url("../../assets/image/wechat.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 45px;
+  height: 45px;
+  text-indent: -999px;
+  display: block;
+}

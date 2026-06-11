@@ -1,0 +1,18 @@
+Security scan report
+======================
+Total Python files with findings: 1
+Total findings: 3
+High severity: 0
+Medium severity: 3
+Low severity: 0
+
+File: /home/runner/work/Genius-Baller/Genius-Baller/server/main.py
+  - Potential Cross-Site Scripting (XSS) (Severity: Medium, Score: 6/10, Line: 3)
+      Description: Detected pattern matching Potential Cross-Site Scripting (XSS).
+      Recommendation: Sanitize and escape user-supplied content before rendering it in HTML responses.
+  - Potential Cross-Site Scripting (XSS) (Severity: Medium, Score: 6/10, Line: 3)
+      Description: Detected pattern matching Potential Cross-Site Scripting (XSS).
+      Recommendation: Sanitize and escape user-supplied content before rendering it in HTML responses.
+  - Potential Cross-Site Scripting (XSS) (Severity: Medium, Score: 6/10, Line: 19)
+      Description: Detected pattern matching Potential Cross-Site Scripting (XSS).
+      Recommendation: Sanitize and escape user-supplied content before rendering it in HTML responses.

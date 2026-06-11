@@ -1,0 +1,38 @@
+.container{
+  margin-top: 50px;
+
+}
+.title{
+  font-size: 16pt;
+  line-height: 140%;
+  border-bottom: 1px solid #FFF;
+  padding: 0 0 6px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.icon_fb{
+  background: url("../../assets/image/icon_fb.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.icon_instagram {
+  background: url("../../assets/image/icon_instagram.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 45px;
+  height: 45px;
+  text-indent: -999px;
+  display: block;
+}
+.icon_wechat{
+  background: url("../../assets/image/wechat.svg") no-repeat;
+  float: left;
+  margin: 0 15px 0 0;
+  width: 45px;
+  height: 45px;
+  text-indent: -999px;
+  display: block;
+}
