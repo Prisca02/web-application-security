@@ -3,7 +3,7 @@ name: Security Tests
 on:
   push:
     branches:
-      - 'master'
+      - main
   
   
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Run security tests
         run: |
-          python scan_SC_vulnerabilities.py \
+          python SAST/python_sc_scan_owasap_top_10/scan_SC_vulnerabilities.py \
           --path server/ \
           --output security_report.txt
       - name: Upload security reports
@@ -42,7 +42,7 @@ jobs:
           if-no-files-found: warn
       - name: Run vulnerability scanning
         run: |
-          python scan_vulnerabilities.py
+          python SAST/multi_language_scanning/scan_vulnerabilities.py
       - name: Upload HTML security report artifact
         uses: actions/upload-artifact@v5
         with:

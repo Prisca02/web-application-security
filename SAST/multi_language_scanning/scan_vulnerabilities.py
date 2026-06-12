@@ -319,10 +319,32 @@ def generate_sarif(findings, output_path):
     output_path.write_text(json.dumps(sarif, indent=2), encoding="utf-8")
 
 
+def build_severity_summary(findings):
+    counts = {"Critical": 0, "High": 0, "Medium": 0, "Low": 0}
+    for find in findings:
+        severity = find.get("normalized_severity") or normalize_severity(find.get("severity"))
+        if severity in counts:
+            counts[severity] += 1
+
+    if counts["Critical"] > 0:
+        risk_rating = "Critical"
+    elif counts["High"] > 0:
+        risk_rating = "High"
+    elif counts["Medium"] > 0:
+        risk_rating = "Medium"
+    elif counts["Low"] > 0:
+        risk_rating = "Low"
+    else:
+        risk_rating = "None"
+
+    return counts, risk_rating
+
+
 def generate_html_report(findings, trends, resolved, output_path):
     now = datetime.utcnow().isoformat() + "Z"
     new_count = sum(1 for status in trends.values() if status == "new")
     total = len(findings)
+    severity_counts, risk_rating = build_severity_summary(findings)
     html_lines = [
         "<html><head><meta charset='utf-8'><title>Security Scan Report</title></head><body>",
         f"<h1>Security Scan Report</h1>",
@@ -330,6 +352,14 @@ def generate_html_report(findings, trends, resolved, output_path):
         f"<p>Total findings: {total}</p>",
         f"<p>New findings: {new_count}</p>",
         f"<p>Resolved since last scan: {len(resolved)}</p>",
+        "<h2>Summary</h2>",
+        "<ul>",
+        f"<li>Critical: {severity_counts['Critical']}</li>",
+        f"<li>High: {severity_counts['High']}</li>",
+        f"<li>Medium: {severity_counts['Medium']}</li>",
+        f"<li>Low: {severity_counts['Low']}</li>",
+        "</ul>",
+        f"<p><strong>Risk Rating:</strong> {risk_rating}</p>",
         "<table border='1' cellpadding='4' cellspacing='0'>",
         "<tr><th>Tool</th><th>ID</th><th>Severity</th><th>OWASP</th><th>CWE</th><th>Package/File</th><th>Line</th><th>Description</th><th>Recommendation</th><th>Status</th></tr>",
     ]
